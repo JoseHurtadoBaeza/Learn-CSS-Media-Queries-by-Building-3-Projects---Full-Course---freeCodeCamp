@@ -3,6 +3,11 @@ $color-2: #fff1e6; // Tablet
 $color-3: #52b788; // Laptop
 $color-4: #bee1e6; // Desktop
 
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
 * { // Reestablecemos la configuración de estilo por defecto del navegador
     margin: 0px;
     padding: 0px;
@@ -23,7 +28,7 @@ $color-4: #bee1e6; // Desktop
 
     display: grid;
     place-content: center;
-    background-color: $color-1;
+    background-color: white;
 }
 
 .text{}
@@ -37,3 +42,28 @@ $color-4: #bee1e6; // Desktop
     font-size: 35px;
     color: red;
 }
+
+@media (max-width: $desktop){
+    .container{
+        background-color: $color-4;
+    }
+}
+
+@media (max-width: $laptop){
+    .container{
+        background-color: $color-3;
+    }
+}
+
+@media (max-width: $tablet){
+    .container{
+        background-color: $color-2;
+    }
+}
+
+@media (max-width: $mobile) {
+    // your styles are here
+    .container{
+        background-color: $color-1;
+    }
+}   
