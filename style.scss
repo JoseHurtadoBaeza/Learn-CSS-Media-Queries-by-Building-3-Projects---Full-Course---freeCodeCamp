@@ -1,3 +1,8 @@
+$color-1: #cbb4db; // Mobile
+$color-2: #fff1e6; // Tablet
+$color-3: #52b788; // Laptop
+$color-4: #bee1e6; // Desktop
+
 * { // Reestablecemos la configuración de estilo por defecto del navegador
     margin: 0px;
     padding: 0px;
@@ -11,8 +16,24 @@
 
 .container {
     height: 100vh;
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    display: grid;
+    place-content: center;
+    background-color: $color-1;
 }
 
 .text{}
 
-#size{}
+#size{
+    position: absolute;
+
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 35px;
+    color: red;
+}
